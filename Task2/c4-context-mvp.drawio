@@ -1,0 +1,152 @@
+<mxfile host="app.diagrams.net" modified="2026-07-29T23:30:00.000Z" agent="Kimi CLI" etag="c4-context-mvp" version="24.0.0" type="device">
+  <diagram name="C4 Context MVP" id="c4-context-mvp">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b&gt;Диаграмма контекста C4&lt;/b&gt;&lt;br&gt;MVP «Медикаменте»: запись на приём через портал" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="320" y="20" width="520" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- People -->
+        <mxCell id="patient" value="&lt;b&gt;Пациент&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Клиент медицинского центра,&#xa;который записывается на приём&#xa;через личный кабинет" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;align=center;verticalAlign=bottom;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="120" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="reception" value="&lt;b&gt;Сотрудник ресепшена&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Принимает звонки, подтверждает&#xa;записи и отправляет напоминания" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;align=center;verticalAlign=bottom;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="140" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="doctor" value="&lt;b&gt;Медицинский специалист&lt;/b&gt;&lt;br&gt;[Person]&lt;br&gt;&lt;br&gt;Получает расписание и&#xa;напоминания о приёмах" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;align=center;verticalAlign=bottom;spacingBottom=10;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="150" height="140" as="geometry" />
+        </mxCell>
+
+        <!-- Software Systems -->
+        <mxCell id="patient-portal" value="&lt;b&gt;Портал пациента&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Веб-приложение для записи&#xa;на приём и управления&#xa;личными данными пациента" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="360" y="120" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="reception-portal" value="&lt;b&gt;Портал ресепшена&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Интерфейс для управления&#xa;записями, пациентами&#xa;и напоминаниями" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="360" y="360" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="appointment-service" value="&lt;b&gt;Сервис записи на приём&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Управляет расписанием,&#xa;слотами и заявками&#xa;на приём к специалистам" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="120" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="crm" value="&lt;b&gt;CRM&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Единая система учёта&#xa;пациентов, контактов&#xa;и договоров" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="360" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notification-service" value="&lt;b&gt;Сервис уведомлений&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Отправляет email/SMS/push&#xa;о записях и напоминаниях" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="680" y="600" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="iam" value="&lt;b&gt;IAM / Keycloak + AD&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Аутентификация и&#xa;управление доступом" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="360" y="600" width="200" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="1c-accounting" value="&lt;b&gt;1С:Бухгалтерия&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Учёт платежей, зарплат&#xa;и налоговая отчётность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="940" y="360" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="1c-warehouse" value="&lt;b&gt;1С:Торговля и склад&lt;/b&gt;&lt;br&gt;[Software System]&lt;br&gt;&lt;br&gt;Учёт ТМЦ и закупок" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1">
+          <mxGeometry x="940" y="600" width="180" height="120" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <mxCell id="r1" value="Записывается на приём,&#xa;просматривает свои данные" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="patient" target="patient-portal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2" value="Управляет записями&#xa;и пациентами" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="reception" target="reception-portal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3" value="Получает напоминания&#xa;о приёмах" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="notification-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="670" />
+              <mxPoint x="640" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="r4" value="Просматривает&#xa;расписание" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="doctor" target="reception-portal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5" value="HTTPS / JSON" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="patient-portal" target="appointment-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r6" value="HTTPS / JSON" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="reception-portal" target="appointment-service">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="420" />
+              <mxPoint x="620" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="r7" value="Получает/обновляет&#xa;данные пациента" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="appointment-service" target="crm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r8" value="Публикует события&#xa;о записях" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="appointment-service" target="notification-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r9" value="Email / SMS / Push" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="notification-service" target="patient">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="660" />
+              <mxPoint x="900" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="r10" value="Аутентификация&#xa;OAuth 2.0 / OIDC" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="patient-portal" target="iam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r11" value="Аутентификация&#xa;OAuth 2.0 / OIDC" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="reception-portal" target="iam">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r12" value="Синхронизация&#xa;платежей (MVP+)" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="crm" target="1c-accounting">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r13" value="Обмен ТМЦ&#xa;(MVP+)" style="edgeStyle=none;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;strokeColor=#666666;fontColor=#666666;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="1c-accounting" target="1c-warehouse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-person" value="&lt;b&gt;Person&lt;/b&gt;" style="shape=actor;whiteSpace=wrap;html=1;fillColor=#08427B;strokeColor=none;fontColor=#FFFFFF;align=center;verticalAlign=bottom;spacingBottom=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="60" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-person-label" value="Человек / роль" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="770" width="120" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-new" value="&lt;b&gt;New System&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1168BD;strokeColor=#0E5CA9;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="280" y="760" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-new-label" value="Новая система MVP" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="370" y="770" width="130" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-existing" value="&lt;b&gt;Existing&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#999999;strokeColor=#666666;fontColor=#FFFFFF;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="520" y="760" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-existing-label" value="Существующая система" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="770" width="150" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
